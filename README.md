@@ -16,7 +16,14 @@ in caso di eventi critici, includendo la posizione GPS del paziente.
 5. **Dashboard paziente + Dashboard medico** — due web app React separate
 
 ## Repository delle componenti
-Da aggiungere
+## Repository delle componenti
+| Componente | Repository |
+|---|---|
+| Raspberry Pi (edge node) | questo repository |
+| App Mobile (GPS) | [wot-project-2025-2026-MobileApp-Ciullo](https://github.com/UniSalento-IDALab-IoTCourse-2025-2026/wot-project-2025-2026-MobileApp-Ciullo) |
+| Backend | [wot-project-2025-2026-Backend-Ciullo](https://github.com/UniSalento-IDALab-IoTCourse-2025-2026/wot-project-2025-2026-Backend-Ciullo) |
+| Dashboard | [wot-project-2025-2026-Dashboard-Ciullo](https://github.com/UniSalento-IDALab-IoTCourse-2025-2026/wot-project-2025-2026-Dashboard-Ciullo) |
+| Presentazione | [wot-project-2025-2026-Presentation-Ciullo](https://github.com/UniSalento-IDALab-IoTCourse-2025-2026/wot-project-2025-2026-Presentation-Ciullo) |
 
 ## Questa componente — Raspberry Pi
 Il Raspberry Pi è il cuore del sistema edge. Gestisce:
