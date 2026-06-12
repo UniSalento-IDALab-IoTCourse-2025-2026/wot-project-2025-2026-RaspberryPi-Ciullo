@@ -1,21 +1,27 @@
-# wot-project-2025-2026-ESP32-Ciullo
-
-# SMARTCARE — Sistema Intelligente EDGE per Monitoraggio Scompenso Cardiaco
+# SMARTCARE — Raspberry Pi (Edge Node)
 
 ## Descrizione del progetto
-SMARTCARE è un sistema intelligente EDGE per la raccolta di parametri biomedici 
+SMARTCARE è un sistema intelligente EDGE per la raccolta di parametri biomedici
 e il rilevamento di anomalie in pazienti affetti da scompenso cardiaco.
-Il sistema monitora in tempo reale parametri fisiologici (battito cardiaco, 
-saturazione ossigeno, temperatura corporea, postura e movimento), rileva 
-situazioni anomale tramite tecniche di intelligenza artificiale eseguite 
-direttamente sul dispositivo edge (smartphone), e notifica automaticamente 
-il medico curante e il hub del pronto soccorso in caso di eventi critici.
+Il sistema acquisisce segnali biomedici reali tramite macchinario IIT,
+esegue anomaly detection in edge su Raspberry Pi con Isolation Forest,
+e notifica automaticamente il medico e il hub del pronto soccorso
+in caso di eventi critici, includendo la posizione GPS del paziente.
 
 ## Architettura del sistema
-Il sistema è composto da 6 componenti principali:
-1. **Sensori wearable + ESP32** — acquisizione parametri biomedici via BLE
-2. **App smartphone (edge node)** — elaborazione locale, anomaly detection, GPS
-3. **AI Engine** — Isolation Forest + soglie adattive per anomaly detection
-4. **Backend** — broker MQTT Mosquitto, MongoDB, REST API, alert engine
-5. **Dashboard medico** — web app React.js per monitoraggio realtime
-6. **Hub pronto soccorso** — integrazione webhook per dispatch ambulanza
+1. **Macchinario IIT + Dongle** — acquisisce segnali biomedici reali via BLE
+2. **Raspberry Pi (edge node)** — anomaly detection con Isolation Forest
+3. **App smartphone** — risponde con posizione GPS su richiesta del Raspberry
+4. **Backend** — MQTT, MongoDB, REST API, alert engine
+5. **Dashboard paziente + Dashboard medico** — due web app React separate
+
+## Repository delle componenti
+Da aggiungere
+
+## Questa componente — Raspberry Pi
+Il Raspberry Pi è il cuore del sistema edge. Gestisce:
+- Ricezione dati dal macchinario IIT tramite dongle USB e container Docker IIT
+- Conversione segnale ECG grezzo in feature elaborabili (BPM, HRV, RR intervals) con neurokit2
+- Anomaly detection in tempo reale con Isolation Forest addestrato su dataset ECG5000
+- Richiesta posizione GPS allo smartphone via HTTP in caso di anomalia rilevata
+- Pubblicazione dati su broker MQTT verso il backend

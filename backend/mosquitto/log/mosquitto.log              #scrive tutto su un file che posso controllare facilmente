@@ -1,0 +1,29 @@
+1781191289: mosquitto version 2.1.2 starting
+1781191289: Config loaded from /mosquitto/config/mosquitto.conf.
+1781191289: Bridge support available.
+1781191289: Persistence support available.
+1781191289: TLS support available.
+1781191289: TLS-PSK support available.
+1781191289: Websockets support available.
+1781191289: Opening ipv4 listen socket on port 1883.
+1781191289: Opening ipv6 listen socket on port 1883.
+1781191289: mosquitto version 2.1.2 running
+1781191968: New connection from 172.18.0.1:53350 on port 1883.
+1781191968: New client connected from 172.18.0.1:53350 as mqtt-explorer-83485b3b (p4, c1, k60).
+1781192085: Client mqtt-explorer-83485b3b [172.18.0.1:53350] disconnected.
+1781192090: New connection from 172.18.0.1:58034 on port 1883.
+1781192090: New client connected from 172.18.0.1:58034 as mqtt-explorer-83485b3b (p4, c1, k60).
+1781192093: Client mqtt-explorer-83485b3b [172.18.0.1:58034] disconnected.
+1781192098: New connection from 172.18.0.1:58036 on port 1883.
+1781192098: New client connected from 172.18.0.1:58036 as mqtt-explorer-83485b3b (p4, c1, k60).
+1781193089: Saving in-memory database to /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.
+1781193089: Error saving in-memory database, unable to open /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.new for writing, error No such file or directory
+1781194136: Client mqtt-explorer-83485b3b [172.18.0.1:58036] disconnected.
+1781194890: Saving in-memory database to /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.
+1781194890: Error saving in-memory database, unable to open /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.new for writing, error No such file or directory
+1781196690: Saving in-memory database to /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.
+1781196690: Error saving in-memory database, unable to open /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.new for writing, error No such file or directory
+1781198491: Saving in-memory database to /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.
+1781198491: Error saving in-memory database, unable to open /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.new for writing, error No such file or directory
+1781200292: Saving in-memory database to /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.
+1781200292: Error saving in-memory database, unable to open /mosquitto/data/                   #gli dico dove salvare eventualmente/mosquitto.db.new for writing, error No such file or directory
