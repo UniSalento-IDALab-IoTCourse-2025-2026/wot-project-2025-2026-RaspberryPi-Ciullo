@@ -1,2 +1,35 @@
-# wot-project-2025-2026-RaspberryPi-Ciullo
-SMARTCARE — Raspberry Pi edge node: acquisizione dati IIT, conversione ECG, anomaly detection
+# SMARTCARE — Raspberry Pi (Edge Node)
+
+## Descrizione del progetto
+SMARTCARE è un sistema intelligente EDGE per la raccolta di parametri biomedici
+e il rilevamento di anomalie in pazienti affetti da scompenso cardiaco.
+Il sistema acquisisce segnali biomedici reali tramite macchinario IIT,
+esegue anomaly detection in edge su Raspberry Pi con Isolation Forest,
+e notifica automaticamente il medico e il hub del pronto soccorso
+in caso di eventi critici, includendo la posizione GPS del paziente.
+
+## Architettura del sistema
+1. **Macchinario IIT + Dongle** — acquisisce segnali biomedici reali via BLE
+2. **Raspberry Pi (edge node)** — anomaly detection con Isolation Forest
+3. **App smartphone** — risponde con posizione GPS su richiesta del Raspberry
+4. **Backend** — MQTT, MongoDB, REST API, alert engine
+5. **Dashboard paziente + Dashboard medico** — due web app React separate
+
+## Repository delle componenti
+Da aggiungere
+
+## Questa componente — Raspberry Pi
+Il Raspberry Pi è il cuore del sistema edge. Gestisce:
+- Ricezione dati dal macchinario IIT tramite dongle USB e container Docker IIT
+- Conversione segnale ECG grezzo in feature elaborabili (BPM, HRV, RR intervals) con neurokit2
+- Anomaly detection in tempo reale con Isolation Forest addestrato su dataset ECG5000
+- Richiesta posizione GPS allo smartphone via HTTP in caso di anomalia rilevata
+- Pubblicazione dati su broker MQTT verso il backend
+
+### Tecnologie utilizzate
+- Hardware: Raspberry Pi + Dongle USB IIT
+- Linguaggio: Python 3.11
+- Librerie AI: scikit-learn, neurokit2, numpy, pandas
+- Comunicazione: MQTT (paho-mqtt), HTTP
+- Runtime: Docker
+- Dataset: ECG5000 (PhysioNet — BIDMC Congestive Heart Failure Database)
